@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | lillys_collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ...existing styles... */
+        .about-columns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        .about-text {
+            flex: 2;
+            min-width: 180px;
+        }
+        .about-photo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-photo img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(106,76,147,0.13);
+            border: 3px solid var(--primary);
+        }
+        @media (max-width: 700px) {
+            .about-columns {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+            .about-photo img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-title">Lillys_collective</span>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html#contact">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
+    <div class="center-logo">
+        <img src="logo.jpg" alt="Lilly's Collective Logo">
+    </div>
+    <main>
+        <section class="about-section" id="about">
+            <div class="about-columns">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p align="justify">
+                        Lilly's Collective celebrates the timeless art of handloom weaving and handcrafted designs. Inspired by the soothing rhythm of hand-woven threads on pristine white cloth, each creation is a testament to tradition, patience, and artistry. Discover handmade patterns—every thread narrates a unique story, woven with care.
+                    </p>
+                </div>
+        </section>
+        <section class="about-section">
+            <div class="about-columns">
+                <div class="about-text">
+                    <h2>Founder</h2>
+                    <p align="justify">
+                        Hi, I’m Keerthi – 
+a student and a beginner in embroidery, stepping into the world of creativity with hope and passion. I recently discovered that creativity is not just a hobby but my true calling. I’m weaving it into my dream of building a unique creative business where imagination meets reality.
+
+Every stitch I make carries a piece of joy, and my wish is simple – to bring a mesmerizing smile to your face through my designs.
+
+This journey is very close to my heart, and I would love your support as I grow, learn, and work towards fulfilling my dream.
+
+<br><br><br>Note: The elegance of this website comes from my supportive dosth, who shaped my ideas into something wonderful. Her story deserves to be celebrated too—so don’t miss the chance to know about her>>
+                </div>
+                <div class="about-photo">
+                    <img src="keerthi.jpg" alt="Keerthi's Photo" />
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="about-columns">
+                <div class="about-text">
+                    <h2>Creative head</h2>
+                    <p align="justify">
+                        Teena is the driving force behind Lilly's Collective's vibrant online presence. As the dedicated social media manager, she ensures that every story, update, and creation reaches the right audience. Always ready to support Keerthi, Teena brings energy, encouragement, and a creative spark to the team. Her behind-the-scenes work helps the collective grow, connect, and inspire others every day.
+                    </p>
+                </div>
+                <div class="about-photo">
+                    <img src="teena.jpg" alt="Teena's Photo" />
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
