@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Collection | lillys_collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .artworks-section {
+            max-width: 1100px;
+            margin: 2.5rem auto 0 auto;
+            background: var(--about-bg);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(255,111,97,0.13);
+            padding: 2.2rem 2rem 2.5rem 2rem;
+            border: 2.5px solid var(--about-border);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .artworks-section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
+            margin-bottom: 0.4rem;
+        }
+        .artworks-section .section-sub {
+            color: var(--text);
+            font-size: 0.98rem;
+            margin-bottom: 1.8rem;
+            opacity: 0.85;
+        }
+        .artworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+        .artwork-item {
+            background: #232336;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(106,76,147,0.10);
+            padding: 1.2rem 1rem 1.5rem 1rem;
+            border: 2px solid var(--primary);
+            width: 100%;
+            max-width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .artwork-item:hover {
+            box-shadow: 0 6px 32px 0 rgba(255,111,97,0.18), 0 1.5px 8px 0 rgba(106,76,147,0.10);
+            border-color: var(--secondary);
+        }
+        .artwork-item img {
+            width: 100%;
+            max-width: 200px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            background: #fff;
+        }
+        .artwork-caption {
+            font-size: 1.08rem;
+            color: var(--text);
+            font-family: 'Quicksand', Arial, sans-serif;
+            margin-top: 0.2rem;
+            font-weight: 700;
+        }
+        .artwork-subtitle {
+            font-size: 0.92rem;
+            color: var(--secondary);
+            margin-top: 0.2rem;
+            font-weight: 600;
+        }
+        .artwork-desc {
+            font-size: 0.92rem;
+            color: var(--text);
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+        .artwork-price {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-top: 0.7rem;
+            font-style: italic;
+        }
+        .artwork-slider {
+            position: relative;
+            width: 100%;
+            max-width: 200px;
+            height: 190px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            background: #fff;
+        }
+        .artwork-slider .slide {
+            display: none;
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            margin: 0;
+        }
+        .artwork-slider .slide.active {
+            display: block;
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.45);
+            color: #fff0f6;
+            border: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.85rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider-btn.prev { left: 6px; }
+        .slider-btn.next { right: 6px; }
+        .slider-btn:hover { background: rgba(255,111,97,0.85); }
+        .slider-dots {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+        .slider-dots .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.55);
+            cursor: pointer;
+        }
+        .slider-dots .dot.active {
+            background: #fff0f6;
+        }
+        @media (max-width: 900px) {
+            .artworks-section {
+                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+            }
+            .artworks-grid {
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-title">Lillys_collective</span>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="handmade.html">Handmade</a>
+            <a class="nav-link" href="custom-orders.html">Custom Orders</a>
+            <a class="nav-link" href="index.html#contact">Contact</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
+    <div class="center-logo">
+        <img src="logo.jpg" alt="Lilly's Collective Logo">
+    </div>
+    <main>
+        <section class="artworks-section" id="handmade">
+            <h2>🧵 Handmade Collection</h2>
+            <div class="section-sub">Every piece below is stitched by hand, one thread at a time.</div>
+            <div class="artworks-grid">
+                <div class="artwork-item">
+                    <div class="artwork-slider">
+                        <img class="slide active" src="art1.jpg" alt="Beginnings with Blessings of Ganesha, styled shot">
+                        <img class="slide" src="art1-alt.jpg" alt="Beginnings with Blessings of Ganesha, close-up">
+                        <button class="slider-btn prev" aria-label="Previous photo">&#10094;</button>
+                        <button class="slider-btn next" aria-label="Next photo">&#10095;</button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="artwork-caption">Beginnings with Blessings of Ganesha</div>
+                    <div class="artwork-subtitle">New Beginnings, Woven in Thread</div>
+                    <div class="artwork-desc">A hand-embroidered hoop of Lord Ganesha, stitched to mark new beginnings with blessings and colour.</div>
+                    <div class="artwork-price">Custom pricing — enquire for details</div>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-slider">
+                        <img class="slide active" src="frame1.jpg" alt="Framed Elegance, framed and ready to hang">
+                        <img class="slide" src="frame1-alt.jpg" alt="Framed Elegance, embroidery in the hoop">
+                        <button class="slider-btn prev" aria-label="Previous photo">&#10094;</button>
+                        <button class="slider-btn next" aria-label="Next photo">&#10095;</button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="artwork-caption">Framed Elegance <br> Ready to Hang</div>
+                    <div class="artwork-subtitle">A Custom Portrait in Thread</div>
+                    <div class="artwork-desc">A delicate embroidered portrait, finished in a soft box frame with a ready-to-hang loop.</div>
+                    <div class="artwork-price">Custom pricing — enquire for details</div>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-slider">
+                        <img class="slide active" src="eras-finished.png" alt="Eras-Inspired Embroidery, finished piece">
+                        <img class="slide" src="eras-sketch.png" alt="Eras-Inspired Embroidery, sketch stage">
+                        <button class="slider-btn prev" aria-label="Previous photo">&#10094;</button>
+                        <button class="slider-btn next" aria-label="Next photo">&#10095;</button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="artwork-caption">Eras-Inspired Embroidery</div>
+                    <div class="artwork-subtitle">A Swiftie's Tribute</div>
+                    <div class="artwork-desc">A Swiftie, just stitching the feeling.<br>I was enchanted to meet you.... <a href="https://www.instagram.com/taylorswift/" target="_blank">@taylorswift</a> </div>
+                    <div class="artwork-price">Custom pricing — enquire for details</div>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-slider">
+                        <img class="slide active" src="grad-pair.png" alt="Graduation Memorial Embroidery, both colourways">
+                        <img class="slide" src="grad-pink.png" alt="Graduation Memorial Embroidery, pink colourway">
+                        <img class="slide" src="grad-blue.png" alt="Graduation Memorial Embroidery, blue colourway">
+                        <button class="slider-btn prev" aria-label="Previous photo">&#10094;</button>
+                        <button class="slider-btn next" aria-label="Next photo">&#10095;</button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="artwork-caption">Graduation Memorial Embroidery</div>
+                    <div class="artwork-subtitle">Class of CSE, 2022–2026</div>
+                    <div class="artwork-desc">The Graduation Memorial Embroidery is here. A personalised keepsake hoop with a photo frame, cap and a hand-stitched floral wreath.</div>
+                    <div class="artwork-price">Custom pricing — enquire for details</div>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-slider">
+                        <img class="slide active" src="wedding-close.png" alt="Wedding Embroidery Hoop, close-up">
+                        <img class="slide" src="wedding-full.png" alt="Wedding Embroidery Hoop, full view">
+                        <button class="slider-btn prev" aria-label="Previous photo">&#10094;</button>
+                        <button class="slider-btn next" aria-label="Next photo">&#10095;</button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="artwork-caption">Wedding Embroidery Hoop</div>
+                    <div class="artwork-subtitle">Upendra &hearts; Divya — June 2026</div>
+                    <div class="artwork-desc">A personalised wedding embroidery hoop, handcrafted to celebrate the beginning of a lifetime together</div>
+                    <div class="artwork-price">Custom pricing — enquire for details</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<script src="image-viewer.js"></script>
+<script>
+    document.querySelectorAll('.artwork-slider').forEach(slider => {
+        const slides = slider.querySelectorAll('.slide');
+        const dots = slider.querySelectorAll('.dot');
+        let current = 0;
+
+        function showSlide(index) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        const prevBtn = slider.querySelector('.slider-btn.prev');
+        const nextBtn = slider.querySelector('.slider-btn.next');
+        if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); showSlide(current - 1); });
+        if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); showSlide(current + 1); });
+        dots.forEach((dot, i) => dot.addEventListener('click', e => { e.stopPropagation(); showSlide(i); }));
+    });
+</script>
+
+</body>
+</html>

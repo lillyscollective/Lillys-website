@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Orders | lillys_collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .custom-section {
+            max-width: 800px;
+            margin: 2.5rem auto 0 auto;
+            background: var(--about-bg);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(255,111,97,0.13);
+            padding: 2.2rem 2rem 2.5rem 2rem;
+            border: 2.5px solid var(--about-border);
+            text-align: center;
+        }
+        .custom-section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
+            margin-bottom: 0.8rem;
+        }
+        .custom-section p {
+            color: var(--text);
+            font-size: 1.02rem;
+            margin: 0 auto 0.6rem auto;
+            max-width: 560px;
+        }
+        .steps-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .step-item {
+            background: #232336;
+            border-radius: 14px;
+            padding: 1.1rem 1rem;
+            border: 2px solid var(--primary);
+        }
+        .step-item .step-num {
+            font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
+            color: var(--secondary);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .step-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            max-width: none;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.7rem 1.8rem;
+            background: var(--nav-bg);
+            color: #fff0f6;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 24px;
+            box-shadow: 0 2px 12px rgba(106,76,147,0.18);
+            transition: box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(255,111,97,0.3);
+        }
+        .custom-price-note {
+            margin-top: 1.2rem;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-style: italic;
+        }
+        @media (max-width: 700px) {
+            .custom-section {
+                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-title">Lillys_collective</span>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="handmade.html">Handmade</a>
+            <a class="nav-link" href="custom-orders.html">Custom Orders</a>
+            <a class="nav-link" href="index.html#contact">Contact</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
+    <div class="center-logo">
+        <img src="logo.jpg" alt="Lilly's Collective Logo">
+    </div>
+    <main>
+        <section class="custom-section" id="custom-orders">
+            <h2>✨ Want Something Custom?</h2>
+            <p>Have an idea you'd like to turn into embroidery?</p>
+            <p>I create personalised pieces for gifts, celebrations, special occasions and more.</p>
+
+            <div class="steps-list">
+                <div class="step-item">
+                    <span class="step-num">01 — Share your idea</span>
+                    <p>Send your concept, reference or image.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">02 — Discuss the details</span>
+                    <p>We'll decide the design, size, colours and requirements together.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">03 — Creation</span>
+                    <p>Your piece is carefully embroidered by hand.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">04 — Delivery</span>
+                    <p>Final arrangements are made based on your location and order.</p>
+                </div>
+            </div>
+
+            <a class="cta-button" href="mailto:lillyscollective@gmail.com?subject=Custom%20Order%20Inquiry">Request a Custom Order</a>
+            <div class="custom-price-note">Custom pricing — enquire for details</div>
+        </section>
+    </main>
+
+<script src="image-viewer.js"></script>
+
+</body>
+</html>

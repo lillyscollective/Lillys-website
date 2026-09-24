@@ -1,0 +1,29 @@
+STEP 1: Open ONLY this project folder
+
+In VS Code:
+Close all folders
+File → Open Folder
+Select your Lillys_collective website folder
+
+STEP 2: Verify you are in the correct repo
+Run this in terminal:
+    git remote -v
+O/P: origin  https://github.com/YOUR_USERNAME/lillys_collective.git (fetch)
+     origin  https://github.com/YOUR_USERNAME/lillys_collective.git (push)
+
+STEP 3: Double-check files tracked in this repo
+        git status
+O/P: modified files details
+
+STEP 4: NOW PUSH SAFELY
+        git add .
+        git commit -m "Update image preview modal"
+        git push origin main
+
+EXTRA SAFETY CHECK (OPTIONAL BUT POWERFUL)
+        git config --get remote.origin.url
+  If URL matches your website repo → ✅ safe
+
+
+
+

@@ -12,7 +12,10 @@
     <nav class="navbar">
         <span class="navbar-title">Lillys_collective</span>
         <div class="nav-links">
-            <a class="nav-link" href="#contact">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="handmade.html">Handmade</a>
+            <a class="nav-link" href="custom-orders.html">Custom Orders</a>
+            <a class="nav-link" href="#contact">Contact</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="newsletter.html">Newsletter</a>
         </div>
@@ -32,14 +35,26 @@
                     <img src="frame1.jpg" alt="Artistic Work 2">
                     <div class="artwork-caption">Framed Elegance <br> Ready to Hang</div> 
                 </div>
+                <div class="artwork-item">
+                    <img src="eras-finished.png" alt="Eras-Inspired Embroidery">
+                    <div class="artwork-caption">Eras-Inspired Embroidery</div>
+                </div>
+                <div class="artwork-item">
+                    <img src="grad-pair.png" alt="Graduation Memorial Embroidery">
+                    <div class="artwork-caption">Graduation Memorial Embroidery</div>
+                </div>
+                <div class="artwork-item">
+                    <img src="wedding-close.png" alt="Wedding Embroidery Hoop">
+                    <div class="artwork-caption">Wedding Embroidery Hoop</div>
+                </div>
             </div>
+            <a class="view-more-link" href="handmade.html">View Full Collection &rarr;</a>
         </section>
         <section class="contact-section" id="contact">
             <h2>Contact</h2>
             <div class="contact-info">
                 <div>Email: <a href="mailto:lillyscollective@gmail.com">lillyscollective@gmail.com</a></div>
                 <div>Instagram: <a href="https://instagram.com/lillys_collective" target="_blank">@lillys_collective</a></div>
-                <div>Phone: <a href="tel:+918328240678">+91 8328240678</a></div>
             </div>
         </section>
     </main>
@@ -100,6 +115,18 @@
             color: var(--text);
             font-family: 'Quicksand', Arial, sans-serif;
             margin-top: 0.2rem;
+        }
+        .view-more-link {
+            display: inline-block;
+            margin-top: 1.8rem;
+            color: var(--secondary);
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Quicksand', Arial, sans-serif;
+            transition: color 0.2s;
+        }
+        .view-more-link:hover {
+            color: var(--nav-link-hover);
         }
         @media (max-width: 900px) {
             .artworks-section {
